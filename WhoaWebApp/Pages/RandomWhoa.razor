@@ -6,17 +6,21 @@
 
 <h3>Random Keanu "Whoa"</h3>
 
+<button @onclick="LoadRandomWhoa" disabled="@isLoading">
+    @(isLoading ? "Loading..." : "Get another whoa")
+</button>
+
 @if (isLoading && currentWhoa is null)
 {
     <p>Loading your whoa...</p>
 }
 else if (!string.IsNullOrEmpty(errorMessage))
 {
-    <p style="color:red">@errorMessage</p> //replace with flavorful error message
+    <p style="color:red">Whoa. You got the following error: @errorMessage</p> 
 }
 else if (currentWhoa is null)
 {
-    <p>No data returned from the API.</p> //replace later!
+    <p>Whoa. Something went wrong. You should try again!</p> 
 }
 else
 {
@@ -25,6 +29,7 @@ else
 
         <p><strong>Character:</strong> @currentWhoa.character</p>
         <p><strong>Director:</strong> @currentWhoa.director</p>
+        <p><strong>Year:</strong> @currentWhoa.year</p>
         <p><strong>Timestamp:</strong> @currentWhoa.timestamp / @currentWhoa.movie_duration</p>
         <p><strong>Line:</strong> "@currentWhoa.full_line"</p>
         <p><strong>Whoa # in movie:</strong> @currentWhoa.current_whoa_in_movie of @currentWhoa.total_whoas_in_movie</p>
@@ -54,9 +59,7 @@ else
     </div>
 }
 
-<button @onclick="LoadRandomWhoa" disabled="@isLoading">
-    @(isLoading ? "Loading..." : "Get another whoa")
-</button>
+
 
 @code {
     private WhoaResult? currentWhoa;

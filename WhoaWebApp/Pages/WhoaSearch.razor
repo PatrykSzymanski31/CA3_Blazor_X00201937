@@ -1,0 +1,142 @@
+﻿@page "/whoa-search"
+@using System.Net.Http.Json
+@inject HttpClient Http
+
+<h3>Search Whoas by Year</h3>
+
+<div class="mb-3">
+    <label for="resultsInput">Number of results</label>
+    <input id="resultsInput"
+           type="number"
+           class="form-control"
+           min="1"
+           max="30"
+           @bind="resultsCount" />
+    <small class="text-muted">Between 1 and 30 results.</small>
+</div>
+
+<div class="mb-3">
+    <label for="movieSelect">Movie</label>
+    <select id="movieSelect"
+            class="form-select"
+            @bind="selectedMovie">
+        @foreach (var m in availableMovies)
+        {
+            <option value="@m">@m</option>
+        }
+    </select>
+</div>
+
+<button class="btn btn-primary" @onclick="SearchAsync">
+    Search
+</button>
+
+<hr />
+
+@if (isLoading)
+{
+    <p>Loading results...</p>
+}
+else if (!string.IsNullOrWhiteSpace(errorMessage))
+{
+    <p class="text-danger">@errorMessage</p>
+}
+else if (searchResults is { Count: > 0 })
+{
+    <ul class="list-group">
+        @foreach (var whoa in searchResults)
+        {
+            <li class="list-group-item">
+                <strong>@whoa.movie</strong> (@whoa.year)<br />
+                <em>@whoa.character</em><br />
+                "@whoa.full_line"
+
+                @* AUDIO CLIP *@
+                @if (!string.IsNullOrWhiteSpace(whoa.audio))
+                {
+                    <audio controls style="width: 100%; margin-top:0.5rem;">
+                        <source src="@whoa.audio" type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                    </audio>
+                }
+                
+            </li>
+        }
+    </ul>
+}
+else if (searchResults is not null)
+{
+    <p>No whoas found for that year.</p>
+}
+
+@code {
+    private List<WhoaResult>? searchResults;
+    private bool isLoading;
+    private string? errorMessage;
+
+    private int resultsCount = 5;
+    private List<string> availableMovies = new();
+    private string? selectedMovie;
+    private bool isMoviesLoading = true;
+    private string? moviesError;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadMoviesAsync();
+    }
+
+    private async Task LoadMoviesAsync()
+    {
+        isMoviesLoading = true;
+        moviesError = null;
+
+        try
+        {
+            var url = "https://whoa.onrender.com/whoas/movies";
+            var movies = await Http.GetFromJsonAsync<List<string>>(url);
+
+            if (movies is { Count: > 0 })
+            {
+                availableMovies = movies.OrderBy(m => m).ToList();
+                selectedMovie = availableMovies.FirstOrDefault();
+            }
+            else
+            {
+                moviesError = "No movies were returned by the API.";
+            }
+        }
+        catch (Exception ex)
+        {
+            moviesError = $"Failed to load movies: {ex.Message}";
+        }
+        finally
+        {
+            isMoviesLoading = false;
+        }
+    }
+
+    private async Task SearchAsync()
+    {
+        isLoading = true;
+        errorMessage = null;
+        searchResults = null;
+        if (resultsCount < 1) resultsCount = 1;
+        if (resultsCount > 30) resultsCount = 30;
+
+        try
+        {
+            var url =
+                $"https://whoa.onrender.com/whoas/random?results={resultsCount}&movie={selectedMovie}";
+
+            searchResults = await Http.GetFromJsonAsync<List<WhoaResult>>(url);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Failed to load results: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}

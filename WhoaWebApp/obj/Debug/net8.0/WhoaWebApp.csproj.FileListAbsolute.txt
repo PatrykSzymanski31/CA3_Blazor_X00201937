@@ -1035,6 +1035,6 @@ C:\Users\szypa\college\CA3_Blazor_X00201937\WhoaWebApp\obj\Debug\net8.0\WhoaWebA
 C:\Users\szypa\college\CA3_Blazor_X00201937\WhoaWebApp\obj\Debug\net8.0\refint\WhoaWebApp.dll
 C:\Users\szypa\college\CA3_Blazor_X00201937\WhoaWebApp\obj\Debug\net8.0\WhoaWebApp.pdb
 C:\Users\szypa\college\CA3_Blazor_X00201937\WhoaWebApp\obj\Debug\net8.0\ref\WhoaWebApp.dll
-C:\Users\szypa\college\CA3_Blazor_X00201937\WhoaWebApp\obj\Debug\net8.0\compressed\rmldrtv70p-{0}-4irf6151x3-4irf6151x3.gz
-C:\Users\szypa\college\CA3_Blazor_X00201937\WhoaWebApp\obj\Debug\net8.0\compressed\y525vbrdjg-{0}-o1oz7feq0c-o1oz7feq0c.gz
-C:\Users\szypa\college\CA3_Blazor_X00201937\WhoaWebApp\obj\Debug\net8.0\compressed\n63rz6oyp3-{0}-hbcddoazxu-hbcddoazxu.gz
+C:\Users\szypa\college\CA3_Blazor_X00201937\WhoaWebApp\obj\Debug\net8.0\compressed\rmldrtv70p-{0}-7wwhna0bt3-7wwhna0bt3.gz
+C:\Users\szypa\college\CA3_Blazor_X00201937\WhoaWebApp\obj\Debug\net8.0\compressed\y525vbrdjg-{0}-qok7mxfj7t-qok7mxfj7t.gz
+C:\Users\szypa\college\CA3_Blazor_X00201937\WhoaWebApp\obj\Debug\net8.0\compressed\n63rz6oyp3-{0}-z8kz7cqi1d-z8kz7cqi1d.gz
