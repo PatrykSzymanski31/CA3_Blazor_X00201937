@@ -1,46 +1,87 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
-- main
+  branches:
+    include:
+      - main
 
-on:
-  push:
-    branches: ["main"]
-   pull_request:
-    branches: [ "main" ]
+pr:
+  branches:
+    include:
+      - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
 
-steps:
-  - name: Checkout repo
-    uses: actions/checkout@v4
+variables:
+  buildConfiguration: 'Release'
+  dotnetVersion: '8.0.x'
 
-  - name: Setup .NET
-    uses: actions/setup-dotnet@v4
-    with:
-      dotnet-version: '8.0.x' 
+stages:
+- stage: BuildAndTest
+  displayName: 'Build and Test'
+  jobs:
+  - job: BuildAndTest
+    displayName: 'Build and run tests'
+    steps:
+    - task: UseDotNet@2
+      displayName: 'Install .NET SDK'
+      inputs:
+        packageType: 'sdk'
+        version: '$(dotnetVersion)'
 
-  - name: Restore
-    run: dotnet restore
+    - task: DotNetCoreCLI@2
+      displayName: 'Restore'
+      inputs:
+        command: 'restore'
+        projects: '**/*.csproj'
 
-  - name: Build
-    run: dotnet build --configuration Release --no-restore
+    - task: DotNetCoreCLI@2
+      displayName: 'Build'
+      inputs:
+        command: 'build'
+        projects: '**/*.csproj'
+        arguments: '--configuration $(buildConfiguration) --no-restore'
 
-  - name: Test
-    run: dotnet test --configuration Release --no-build
+    - task: DotNetCoreCLI@2
+      displayName: 'Test'
+      inputs:
+        command: 'test'
+        projects: '**/*.csproj'
+        arguments: '--configuration $(buildConfiguration) --no-build'
+        publishTestResults: true
 
-  - name: Publish
-    run: dotnet publish WoahWebApp.csproj -c Release -o published
+    - task: DotNetCoreCLI@2
+      displayName: 'Publish Blazor app'
+      inputs:
+        command: 'publish'
+        projects: 'WhoaWebApp.csproj'
+        arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+        publishWebProjects: false
+        zipAfterPublish: true
 
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish artifact'
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+        publishLocation: 'Container'
 
- # - name: Deploy to Azure Static Web Apps
- #   uses: Azure/static-web-apps-deploy@v1
- #   with:
- #     azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
- #     app_location: "published/wwwroot"
- #     api_location: ""
- #     output_location: ""
+- stage: Deploy
+  displayName: 'Deploy to Azure Web App'
+  dependsOn: BuildAndTest
+  condition: succeeded()
+
+  jobs:
+  - deployment: DeployWebApp
+    displayName: 'Deploy to Azure Web App'
+    environment: 'production'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: DownloadBuildArtifacts@0
+            displayName: 'Download build artifact'
+            inputs:
+              buildType: 'current'
+              downloadType: 'single'
+              artifactName: 'drop'
+              downloadPath: '$(System.DefaultWorkingDirectory)'
