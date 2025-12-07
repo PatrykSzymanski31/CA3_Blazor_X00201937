@@ -4,6 +4,9 @@
 @using WhoaWebApp
 @inject HttpClient Http
 
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
 <h3>Random Keanu "Whoa"</h3>
 
 <button @onclick="LoadRandomWhoa" disabled="@isLoading">
@@ -28,8 +31,6 @@ else
         <h4>@currentWhoa.movie (@currentWhoa.year)</h4>
 
         <p><strong>Character:</strong> @currentWhoa.character</p>
-        <p><strong>Director:</strong> @currentWhoa.director</p>
-        <p><strong>Year:</strong> @currentWhoa.year</p>
         <p><strong>Timestamp:</strong> @currentWhoa.timestamp / @currentWhoa.movie_duration</p>
         <p><strong>Line:</strong> "@currentWhoa.full_line"</p>
         <p><strong>Whoa # in movie:</strong> @currentWhoa.current_whoa_in_movie of @currentWhoa.total_whoas_in_movie</p>
@@ -51,21 +52,78 @@ else
 
         @if (!string.IsNullOrWhiteSpace(currentWhoa.audio))
         {
-            <audio @key="videoUrl" controls style="width: 100%; margin-top:0.5rem;">
+            <audio controls style="width: 100%; margin-top:0.5rem;">
                 <source src="@currentWhoa.audio" type="audio/mpeg" />
                 Your browser does not support the audio element.
             </audio>
         }
+        <hr>
+        
+        <h4>Movie Details with OMDb</h4>
+        @if (isMovieLoading)
+    {
+        <p>Loading movie details...</p>
+    }
+    else if (!string.IsNullOrEmpty(movieError))
+    {
+        <p class="text-danger">@movieError</p>
+    }
+    else if (currentMovie != null)
+    {
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        @if (!string.IsNullOrWhiteSpace(currentMovie.Poster) && currentMovie.Poster != "N/A")
+                        {
+                            <img src="@currentMovie.Poster"
+                                 alt="Poster for @currentMovie.Title"
+                                 style="max-width:100%; border-radius:4px;" />
+                        }
+                    </div>
+                    <div class="col-md-9">
+                        <p><strong>Title:</strong> @currentMovie.Title (@currentMovie.Year)</p>
+                        <p><strong>Genre:</strong> @currentMovie.Genre</p>
+                        <p><strong>Director:</strong> @currentMovie.Director</p>
+                        <p><strong>Actors:</strong> @currentMovie.Actors</p>
+                        <p><strong>IMDb rating:</strong> @currentMovie.imdbRating</p>
+                        <p><strong>Plot:</strong> @currentMovie.Plot</p>
+
+                        @if (!string.IsNullOrWhiteSpace(currentMovie.imdbID))
+                        {
+                            <a href="https://www.imdb.com/title/@currentMovie.imdbID" target="_blank">
+                                View on IMDb
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    else
+    {
+        <p>No extra movie details available.</p>
+    }
+
+
     </div>
+
 }
 
 
 
 @code {
     private WhoaResult? currentWhoa;
+    private OmdbMovie? currentMovie;
+
+
     private bool isLoading = true;
+    private bool isMovieLoading;
     private string? errorMessage;
+    private string? movieError;
     private string? videoUrl;
+
+    private const string OmdbApiKey = "46c14fa0";
 
     protected override async Task OnInitializedAsync()
     {
@@ -87,8 +145,7 @@ else
             var list = await Http.GetFromJsonAsync<List<WhoaResult>>(url);
 
             currentWhoa = list?.FirstOrDefault();
-
-            // Pick a 720p resolution if available
+            
             if (currentWhoa?.video != null && currentWhoa.video.Count > 0)
             {
                 if (currentWhoa.video.TryGetValue("720p", out var v720))
@@ -102,6 +159,9 @@ else
             {
                 videoUrl = null;
             }
+
+            await LoadMovieDetailsAsync(); //waiting on 2nd api
+
         }
         catch (Exception ex)
         {
@@ -110,6 +170,46 @@ else
         finally
         {
             isLoading = false;
+        }
+    }
+
+    private async Task LoadMovieDetailsAsync()
+ {
+        if (currentWhoa == null || string.IsNullOrWhiteSpace(currentWhoa.movie))
+        {
+            movieError = "No movie name available for this whoa.";
+            return;
+        }
+
+        isMovieLoading = true;
+        movieError = null;
+        currentMovie = null;
+
+        try
+        {
+            var encodedTitle = Uri.EscapeDataString(currentWhoa.movie);
+            var url = $"https://www.omdbapi.com/?apikey={OmdbApiKey}&t={encodedTitle}";
+
+            // Second API: OMDb
+            var result = await Http.GetFromJsonAsync<OmdbMovie>(url);
+
+            if (result == null || string.Equals(result.Response, "False", StringComparison.OrdinalIgnoreCase))
+            {
+                movieError = result?.Error ?? "No additional movie info found.";
+            }
+            else
+            {
+                currentMovie = result;
+            }
+        }
+        catch (Exception ex)
+        {
+            movieError = $"Error loading movie details: {ex.Message}";
+        }
+        finally
+        {
+            isMovieLoading = false;
+            StateHasChanged();
         }
     }
 }

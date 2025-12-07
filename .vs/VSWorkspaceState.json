@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\WhoaWebApp",
-    "\\WhoaWebApp\\Layout",
+    "\\WhoaWebApp.E2ETests",
     "\\WhoaWebApp\\Pages"
   ],
-  "SelectedNode": "\\WhoaWebApp\\WhoaWebApp.sln",
+  "SelectedNode": "\\WhoaWebApp.E2ETests\\WhoaWebApp.E2ETests.csproj",
   "PreviewInSolutionExplorer": false
 }

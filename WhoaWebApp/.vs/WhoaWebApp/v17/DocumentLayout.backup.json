@@ -3,28 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|c:\\users\\szypa\\college\\ca3_blazor_x00201937\\whoawebapp\\pages\\whoasearch.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|solutionrelative:pages\\whoasearch.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|c:\\users\\szypa\\college\\ca3_blazor_x00201937\\whoawebapp\\pages\\randomwhoa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|solutionrelative:pages\\randomwhoa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FC4F7C5A-FE7E-4B36-9D00-9ED4DA1F1B47}|..\\WhoaWebApp.E2ETests\\WhoaWebApp.E2ETests.csproj|c:\\users\\szypa\\college\\ca3_blazor_x00201937\\whoawebapp.e2etests\\whoaappe2e.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|c:\\users\\szypa\\college\\ca3_blazor_x00201937\\whoawebapp\\whoaresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|solutionrelative:whoaresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|c:\\users\\szypa\\college\\ca3_blazor_x00201937\\whoawebapp\\pages\\whoasearch.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|solutionrelative:pages\\whoasearch.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|c:\\users\\szypa\\college\\ca3_blazor_x00201937\\whoawebapp\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|solutionrelative:layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|c:\\users\\szypa\\college\\ca3_blazor_x00201937\\whoawebapp\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|solutionrelative:layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|c:\\users\\szypa\\college\\ca3_blazor_x00201937\\whoawebapp\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|solutionrelative:pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|c:\\users\\szypa\\college\\ca3_blazor_x00201937\\whoawebapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B5F9326E-C5D2-4850-88BA-930E280193CB}|WhoaWebApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +33,53 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{bdada759-5db7-402f-96e3-402b17c8c5b4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WhoaAppE2E.cs",
+              "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp.E2ETests\\WhoaAppE2E.cs",
+              "RelativeDocumentMoniker": "..\\WhoaWebApp.E2ETests\\WhoaAppE2E.cs",
+              "ToolTip": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp.E2ETests\\WhoaAppE2E.cs*",
+              "RelativeToolTip": "..\\WhoaWebApp.E2ETests\\WhoaAppE2E.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwDEAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T17:39:14.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Pages\\Home.razor",
+              "RelativeToolTip": "Pages\\Home.razor",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADsAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-07T16:24:48.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T15:21:38.302Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -46,77 +90,31 @@
               "RelativeToolTip": "Layout\\MainLayout.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-29T13:16:54.13Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WhoaSearch.razor",
-              "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Pages\\WhoaSearch.razor",
-              "RelativeDocumentMoniker": "Pages\\WhoaSearch.razor",
-              "ToolTip": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Pages\\WhoaSearch.razor*",
-              "RelativeToolTip": "Pages\\WhoaSearch.razor*",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAvwIAAAABnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-29T13:08:34.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Pages\\Home.razor",
-              "RelativeToolTip": "Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-29T12:53:18.902Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T17:03:34.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RandomWhoa.razor",
-              "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Pages\\RandomWhoa.razor",
-              "RelativeDocumentMoniker": "Pages\\RandomWhoa.razor",
-              "ToolTip": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Pages\\RandomWhoa.razor",
-              "RelativeToolTip": "Pages\\RandomWhoa.razor",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T16:15:29.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T13:16:54.13Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "WhoaSearch.razor",
+              "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Pages\\WhoaSearch.razor",
+              "RelativeDocumentMoniker": "Pages\\WhoaSearch.razor",
+              "ToolTip": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Pages\\WhoaSearch.razor",
+              "RelativeToolTip": "Pages\\WhoaSearch.razor",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAiwPAAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T13:08:34.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "WhoaResult.cs",
               "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\WhoaResult.cs",
               "RelativeDocumentMoniker": "WhoaResult.cs",
               "ToolTip": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\WhoaResult.cs",
               "RelativeToolTip": "WhoaResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T16:14:55.873Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "WhenOpened": "2025-11-26T16:14:55.873Z"
             }
           ]
         }
