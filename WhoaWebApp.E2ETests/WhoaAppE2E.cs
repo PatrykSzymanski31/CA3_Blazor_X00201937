@@ -28,9 +28,7 @@ namespace WhoaWebApp.E2ETests
             await page.GetByText("Character:").ClickAsync();
             await page.GetByRole(AriaRole.Heading, new() { Name = "Movie Details with OMDb" }).ClickAsync();
 
-        }
-
-    }
+        }  
 
      [Test]
         public static async Task WhoaSearchTestBillTedAdventure()
