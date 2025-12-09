@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.github\\workflows\\deploy.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp.E2ETests\\WhoaAppE2E.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WhoaWebApp.E2ETests\\WhoaAppE2E.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WhoaWebApp\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -50,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,7 +66,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "WhoaAppE2E.cs",
+              "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp.E2ETests\\WhoaAppE2E.cs",
+              "RelativeDocumentMoniker": "WhoaWebApp.E2ETests\\WhoaAppE2E.cs",
+              "ToolTip": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp.E2ETests\\WhoaAppE2E.cs",
+              "RelativeToolTip": "WhoaWebApp.E2ETests\\WhoaAppE2E.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T12:40:18.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -74,13 +90,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "WhoaWebApp\\wwwroot\\index.html",
               "ToolTip": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\wwwroot\\index.html",
               "RelativeToolTip": "WhoaWebApp\\wwwroot\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-12-09T11:41:03.011Z"
             },
@@ -92,14 +108,14 @@
               "RelativeDocumentMoniker": ".github\\workflows\\deploy.yml",
               "ToolTip": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\.github\\workflows\\deploy.yml",
               "RelativeToolTip": ".github\\workflows\\deploy.yml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACgAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAFIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2025-12-09T11:37:10.12Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\App.razor",
               "RelativeDocumentMoniker": "WhoaWebApp\\App.razor",
@@ -111,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Program.cs",
               "RelativeDocumentMoniker": "WhoaWebApp\\Program.cs",
@@ -123,7 +139,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "OmdbMovies.cs",
               "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\OmdbMovies.cs",
               "RelativeDocumentMoniker": "WhoaWebApp\\OmdbMovies.cs",
@@ -135,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "WhoaWebApp\\Pages\\Home.razor",
@@ -147,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "RandomWhoa.razor",
               "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Pages\\RandomWhoa.razor",
               "RelativeDocumentMoniker": "WhoaWebApp\\Pages\\RandomWhoa.razor",
@@ -159,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "WhoaResult.cs",
               "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\WhoaResult.cs",
               "RelativeDocumentMoniker": "WhoaWebApp\\WhoaResult.cs",
@@ -171,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\szypa\\college\\CA3_Blazor_X00201937\\WhoaWebApp\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "WhoaWebApp\\Layout\\NavMenu.razor",

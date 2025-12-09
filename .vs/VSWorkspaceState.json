@@ -4,8 +4,11 @@
     "\\.github",
     "\\.github\\workflows",
     "\\WhoaWebApp",
-    "\\WhoaWebApp\\wwwroot"
+    "\\WhoaWebApp.E2ETests",
+    "\\WhoaWebApp\\Pages",
+    "\\WhoaWebApp\\wwwroot",
+    "\\WhoaWebApp\\wwwroot\\css"
   ],
-  "SelectedNode": "\\WhoaWebApp\\WhoaWebApp.sln",
+  "SelectedNode": "\\.github\\workflows\\deploy.yml",
   "PreviewInSolutionExplorer": false
 }
