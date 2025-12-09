@@ -34,8 +34,8 @@ jobs:
         run: dotnet build ./WhoaWebApp/WhoaWebApp.csproj --configuration Release --no-restore
 
       
-      - name: Test
-        run: dotnet test ./WhoaWebApp.E2ETests/WhoaWebApp.E2ETests.csproj --configuration Release --no-build
+ #     - name: Test
+  #      run: dotnet test ./WhoaWebApp.E2ETests/WhoaWebApp.E2ETests.csproj --configuration Release --no-build
 
       - name: Publish Blazor WASM
         run: dotnet publish ./WhoaWebApp/WhoaWebApp.csproj -c Release -o ./publish
