@@ -1,4 +1,6 @@
 ﻿using Microsoft.Playwright;
+using System.Threading.Tasks;
+using NUnit.Framework;
 
 namespace WhoaWebApp.E2ETests
 {
@@ -7,12 +9,12 @@ namespace WhoaWebApp.E2ETests
     public class Tests : PageTest
     {
         [Test]
-        public async Task RandomWhoaTestFindExtraWhoa()
+        public async Task RandomWhoaFindExtraWhoaTest()
         {
-            using var playwright = await Playwright.CreateAsync();
+            using var playwright = await Microsoft.Playwright.Playwright.CreateAsync();
             await using var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
-                Headless = false,
+                Headless = true,
             });
             var context = await browser.NewContextAsync();
             var page = await context.NewPageAsync();
@@ -31,9 +33,9 @@ namespace WhoaWebApp.E2ETests
         }  
 
      [Test]
-        public static async Task WhoaSearchTestBillTedAdventure()
+        public static async Task WhoaSearchBillTedAdventureTest()
         {
-            using var playwright = await Playwright.CreateAsync();
+            using var playwright = await Microsoft.Playwright.Playwright.CreateAsync();
             await using var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
                 Headless = false,
