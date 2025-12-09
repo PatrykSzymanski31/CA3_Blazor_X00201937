@@ -69,7 +69,7 @@ jobs:
        run: dotnet restore ./WhoaWebApp.E2ETests/WhoaWebApp.E2ETests.csproj
 
      - name: Install Playwright browsers
-       run: pwsh bin/Debug/netX/playwright.ps1 install --with-deps
+       run: npx playwright install-deps chromium
 
 
      - name: Run E2E tests against GitHub Pages
