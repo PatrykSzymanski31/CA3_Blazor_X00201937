@@ -33,7 +33,7 @@ namespace WhoaWebApp.E2ETests
     }
 
      [Test]
-     public static async Task WhoaSearchTestBillTedAdventure()
+        public static async Task WhoaSearchTestBillTedAdventure()
         {
             using var playwright = await Playwright.CreateAsync();
             await using var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
@@ -56,3 +56,5 @@ namespace WhoaWebApp.E2ETests
             await page.GetByText("Title: Bill & Ted's Excellent Adventure (1989)").ClickAsync();
         }
     }
+
+}
