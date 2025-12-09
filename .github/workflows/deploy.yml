@@ -33,10 +33,6 @@ jobs:
       - name: Build
         run: dotnet build ./WhoaWebApp/WhoaWebApp.csproj --configuration Release --no-restore
 
-      
-      - name: Test
-        run: dotnet test ./WhoaWebApp.E2ETests/WhoaWebApp.E2ETests.csproj --configuration Release --no-build
-
       - name: Publish Blazor WASM
         run: dotnet publish ./WhoaWebApp/WhoaWebApp.csproj -c Release -o ./publish
 
@@ -55,3 +51,22 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  e2e:
+     needs: deploy
+     runs-on: ubuntu-latest
+
+     steps:
+     - name: Checkout
+       uses: actions/checkout@v4
+
+     - name: Setup .NET
+       uses: actions/setup-dotnet@v4
+       with:
+         dotnet-version: '8.0.x'
+
+     - name: Restore E2E tests
+       run: dotnet restore ./WhoaWebApp.E2ETests/WhoaWebApp.E2ETests.csproj
+
+     - name: Run E2E tests against GitHub Pages
+       run: dotnet test ./WhoaWebApp.E2ETests/WhoaWebApp.E2ETests.csproj --configuration Release
