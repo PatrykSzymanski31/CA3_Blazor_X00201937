@@ -68,5 +68,9 @@ jobs:
      - name: Restore E2E tests
        run: dotnet restore ./WhoaWebApp.E2ETests/WhoaWebApp.E2ETests.csproj
 
+     - name: Install Playwright browsers
+       run: pwsh ./WhoaWebApp.E2ETests/bin/Release/net8.0/playwright.ps1 install --with-deps
+
+
      - name: Run E2E tests against GitHub Pages
        run: dotnet test ./WhoaWebApp.E2ETests/WhoaWebApp.E2ETests.csproj --configuration Release
