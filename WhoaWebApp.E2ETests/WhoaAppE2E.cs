@@ -38,7 +38,7 @@ namespace WhoaWebApp.E2ETests
             using var playwright = await Microsoft.Playwright.Playwright.CreateAsync();
             await using var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
-                Headless = false,
+                Headless = true,
             });
             var context = await browser.NewContextAsync();
             var page = await context.NewPageAsync();
