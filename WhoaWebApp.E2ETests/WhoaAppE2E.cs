@@ -6,7 +6,7 @@ namespace WhoaWebApp.E2ETests
 {
     [Parallelizable(ParallelScope.Self)]
     [TestFixture]
-    public class Tests : PageTest
+    public class Tests 
     {
         [Test]
         public async Task RandomWhoaFindExtraWhoaTest()
