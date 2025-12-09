@@ -57,20 +57,26 @@ jobs:
      runs-on: ubuntu-latest
 
      steps:
-     - name: Checkout
-       uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-     - name: Setup .NET
-       uses: actions/setup-dotnet@v4
-       with:
-         dotnet-version: '8.0.x'
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
 
-     - name: Restore E2E tests
-       run: dotnet restore ./WhoaWebApp.E2ETests/WhoaWebApp.E2ETests.csproj
+      - name: Restore E2E tests
+        working-directory: ./WhoaWebApp.E2ETests
+        run: dotnet restore
 
-     - name: Install Playwright browsers
-       run: npx playwright install-deps chromium
+      - name: Build E2E tests
+        working-directory: ./WhoaWebApp.E2ETests
+        run: dotnet build --configuration Release --no-restore
 
+      - name: Install Playwright browsers
+        working-directory: ./WhoaWebApp.E2ETests
+        run: pwsh bin/Release/net8.0/playwright.ps1 install --with-deps
 
-     - name: Run E2E tests against GitHub Pages
-       run: dotnet test ./WhoaWebApp.E2ETests/WhoaWebApp.E2ETests.csproj --configuration Release
+      - name: Run E2E tests against GitHub Pages
+        working-directory: ./WhoaWebApp.E2ETests
+        run: dotnet test --configuration Release --no-build
