@@ -75,7 +75,7 @@ jobs:
 
       - name: Install Playwright browsers
         working-directory: ./WhoaWebApp.E2ETests
-        run: pwsh bin/Release/net8.0/playwright.ps1 install --with-deps
+        run: pwsh bin/Release/net8.0/playwright.ps1 install
 
       - name: Run E2E tests against GitHub Pages
         working-directory: ./WhoaWebApp.E2ETests
