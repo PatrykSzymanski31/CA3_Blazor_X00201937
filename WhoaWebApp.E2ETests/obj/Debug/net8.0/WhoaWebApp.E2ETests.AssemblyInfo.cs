@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WhoaWebApp.E2ETests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d59ece0e531a2a62fef87b7e374a7795dcf762e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b8bc7098a90d52e0a8472903fd5ce3ab094ccb7")]
 [assembly: System.Reflection.AssemblyProductAttribute("WhoaWebApp.E2ETests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WhoaWebApp.E2ETests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
